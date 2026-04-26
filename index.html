@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Счастье</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .btn-happy {
+      padding: 24px 48px;
+      font-size: 1.4rem;
+      color: #fff;
+      background: #ff6b6b;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-happy:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-happy:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <button class="btn-happy" onclick="showHappiness()">
+    Нажми, чтобы получить счастье
+  </button>
+
+  <script>
+    const phrases = [
+      'Вы абсолютно счастливы! 🚀',
+      'Счастье уже внутри тебя! ✨',
+      'Ты великолепен, и это факт! 💎',
+      'Улыбнись — мир улыбнётся в ответ! 😊',
+      'Сегодня твой лучший день! 🌟',
+      'Ты заслуживаешь всего самого лучшего! 🎉',
+      'Вселенная на твоей стороне! 🌈',
+      'Ты сильнее, чем думаешь! 💪',
+      'Каждый момент — это подарок! 🎁',
+      'Счастье — это путь, а не цель! 🛤️',
+      'Ты делаешь этот мир лучше! 🌍',
+      'Всё получится, поверь! 🍀',
+    ];
+
+    function showHappiness() {
+      const phrase = phrases[Math.floor(Math.random() * phrases.length)];
+      alert(phrase);
+    }
+  </script>
+</body>
+</html>
